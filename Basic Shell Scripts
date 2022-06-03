@@ -1,0 +1,79 @@
+< To add two values in Script >
+
+#!/bin/bash
+#Take input from user and calucate sum
+
+read -p "enter value x: " x
+read -p "enter value y: " y
+sum=$(( $x + $y ))
+echo "Total Value: $sum"
+
+
+
+< If-elif condition Scripts >
+
+#!/bin/bash
+
+count=23
+
+if [ $count -eq 23 ]
+then
+        echo "23 is correct"
+elif [ $count -gt 23 ]
+then
+        echo "To much"
+else
+        echo "Not enough"
+fi
+
+
+
+< For-Loop condition Scripts >
+
+#!/bin/bash
+
+#for counter in {1..20} 
+#do
+#       echo "counting from 1 to 20, now at $counter"
+#       sleep 2
+#done
+
+#For loop with positional parameters
+
+for Token in $*
+do
+        echo "$Token"
+done
+
+
+
+< Positional Parameter Scripts (use for Arguments) >
+
+#!/bin/bash
+
+echo "File Name : $0"
+echo "First parametere : $1"
+echo "Second parameter : $2"
+echo "Quoted Value : $*"  # $* it means Show all positional parameter 
+echo "Total Number of parameters : $#"
+
+
+< test command (use for true or false) and if_else Scripts >
+
+#!/bin/bash
+
+#check value true or false with test command
+# [ test 25 -gt 20 && echo True || echo False ]
+
+
+#To check file available or not
+
+if [ -f myfile.txt ]
+then
+        echo "myfile.txt exists!"
+else
+        echo "myfile.txt not found!"
+fi
+
+
+
