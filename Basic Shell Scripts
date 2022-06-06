@@ -76,4 +76,29 @@ else
 fi
 
 
+< Array Command >
+
+#!/bin/bash
+
+Name[0]="Shahid"
+Name[1]="Faizan"
+Name[2]="Armaan"
+Name[3]="Shahbaz"
+Name[4]="Adnaan"
+
+echo "All Name : ${Name[*]}"
+
+
+< Operator command >
+
+#!/bin/bash 
+
+a=10
+b=10
+
+val=`expr $a == $b` && echo "True" || echo "false"  # val=`expr $a + $b` we can also add the value # 
+
+echo "Total Value : $val"
+
+
 
